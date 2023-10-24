@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <title>Cadastro</title>
+</head>
+
+<body class="pag1">
+
+    <header>
+        <nav class="nav">
+            <nav class="nav">
+                <a class="botton" href="/">HOME<i class="fi fi-br-home"></i></a>
+                <a class="botton" href="/produtos">PRODUTOS<i class="fi fi-rr-cupcake"></i></a>
+                <a class="botton" href="/public/contato.html">CONTATO<i class="fi fi-rr-call-incoming"></i></a>
+                <a class="botton" href="/pedidos">CARRINHO<i class="fi fi-sr-shopping-cart"></i></a>
+                <a class="botton" href="/cadastrar">CADASTRAR<i class="fi fi-rr-edit"></i></a>
+                <a class="botton" href="/listar">LISTAR<i class="fi fi-rr-document"></i></a>
+            </nav>
+        </nav>
+
+        
+
+    </header>
+
+
+    <section >
+
+        <form th:action="@{/adicionarCliente}" th:object="${cliente}" method="post" class="Cds">
+
+            <div class="formulario1">
+                    <br><h1 class="title2">CADASTRAR CLIENTE</h1>
+                <div>
+                    <label>Nome completo*:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Equiton Gomes da Silva" required th:field="*{nomeCompleto}" >
+                </div>
+
+                <div>
+                    <label>Data de nascimento*:</label>
+                    <input type="date" name="date" id="data" placeholder="01/02/03" th:field="*{dataNascimento}">
+                </div>
+
+                <div>
+                    <label>E-Mail*:</label>
+                    <input type="email" name="email" id="email" placeholder="goku_brabo@hotmail.com" required th:field="*{email}">
+                </div>
+
+                <div>
+                    <label>Sexo*:</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Masculino" value="Masculino" th:field="*{genero}"> Masculino
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Feminino" value= "Feminino" th:field="*{genero}"> Feminino
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Naoinformar" value="Não informar" th:field="*{genero}"> Não informar
+                        </label>
+                    </div>
+                </div>
+        
+                <div>
+                    <label>Endereço*:</label>
+                        <input type="text" placeholder="Francisco Ferreira Souto" id="endereco" th:field="*{enderecoCompleto}">
+                </div>
+
+                <div>
+                    <label>CEP*:</label>
+                        <input type="text" placeholder="59655000" id="cep" name="cep" th:field="*{cep}">
+                </div>
+
+                <div>
+                    <label>Cidade*:</label>
+                        <input type="text" placeholder="Mossoró" id="cidade" th:field="*{cidade}">
+                </div>
+
+                
+                <div align="center">
+                    <button class="botaoSubmit" type="reset">Limpar</button>
+                    <button class="botaoSubmit" type="submit" required>Cadastrar!</button>
+                </div>
+            </div>
+        </form>
+        
+
+        <form th:action="@{/dependentes/adicionarDependente}" th:object="${dependente}" method="post"  class="Cds">
+           
+            <div class="formulario2">
+                <br><h1 class="title2">CADASTRAR DEPENDENTE</h1>
+                <div>
+                    <label >Nome completo*:</label>
+                    <input type="text" placeholder="Equiton" id="nomeDependente"  required th:field="*{nomeDependente}">
+                </div>
+
+                <div>
+                    <label>Data de nascimento*:</label>
+                    <input type="date" placeholder="01/02/03" id="dataDependente" required th:field="*{dataNascimentoDepen}">
+                </div>
+
+                <div>
+                    <label>Sexo*:</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Masculino" value="Masculino" th:field="*{generoDepen}"> Masculino
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Feminino" value= "Feminino" th:field="*{generoDepen}"> Feminino
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Naoinformar" value="Não informar" th:field="*{generoDepen}"> Não informar
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <div align="center">
+                        <button class="botaoSubmit" type="reset">Limpar</button>
+                        <button class="botaoSubmit" type="submit" required>Cadastrar!</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <form th:action="@{/produtos/adicionarProdutos}" th:object="${produto}" method="post"  class="Cds">
+
+            <div id="b" class="formulario3">
+                <br><h1 class="title3">CADASTRAR PRODUTOS</h1>
+            <div>
+                <label>Nome do produto*:</label>
+                <input type="text" name="nome" id="nome" placeholder="Bolo" th:field="*{nomeDoProduto}">
+            </div>
+
+            <div>
+                <label>Marca*:</label>
+                <input type="text" name="marca" id="marca" placeholder="Nestle" th:field="*{marca}">
+            </div>
+
+            <div>
+                <label>Altura*:</label>
+                <input type="text" name="Altura" id="Altura" placeholder="10.0cm" th:field="*{altura}">
+            </div>
+
+            <div>
+                <label>Largura*:</label>
+                <input type="text" name="Largura" id="Largura" placeholder="100.0cm" th:field="*{largura}">
+            </div>
+
+            <div>
+                <label>Profundidade*:</label>
+                <input type="text" name="Profundidade" id="Profundidade" placeholder="100.0cm" th:field="*{profundidade}">
+            </div>
+
+            <div>
+                <label>Volume*:</label>
+                <input type="text" name="Volume" id="Volume" placeholder="100.0cm" th:field="*{volume}">
+            </div>
+
+            <div>
+                <label>Peso*:</label>
+                <input type="text" name="Peso" id="Peso" placeholder="1.0 Kg" th:field="*{peso}">
+            </div>
+
+            <div>
+                <label>Preço de compra*:</label>
+                <input type="text" name="preçoCompra" id="preçoCompra" placeholder="50.0" th:field="*{precoDeCompra}">
+            </div>
+            <div>
+                <label>Preço de venda*:</label>
+                <input type="text" name="preçoVenda" id="preçoVenda" placeholder="50.0" th:field="*{precoDeVenda}">
+            </div>
+
+            <div>
+                <label>Data*:</label>
+                <input type="date" name="date" id="data" placeholder="01/02/03" th:field="*{dataDeCadastro}">
+            </div>
+
+            <div>
+                <div align="center">
+                    <button class="botaoSubmit2" type="reset">Limpar</button>
+                    <button class="botaoSubmit2" type="submit" required>Cadastrar!</button>
+                </div>
+            </div>
+        </form>
+
+          </section>
+</body>
+</html>

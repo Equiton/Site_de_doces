@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Pessoas | Cadastro</title>
+</head>
+
+<body class="pag1">
+
+
+    <header>
+        <div class="but2">
+            <a class="botton3" href="/listar">VOLTAR</a>
+        </div>
+    </header>
+
+
+
+    <div class="lista">
+        <div class="tabela1">
+            <br>
+            <h1 class="title3">LISTA DE CLIENTES CADASTRADOS</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>NOME</th>
+                        <th>GENERO</th>
+                        <th>E-MAIL</th>
+                        <th>ENDEREÇO</th>
+                        <th>CEP</th>
+                        <th>CIDADE</th>
+                        <th>DATA DE NASCIMENTO</th>
+                        <th>Editar</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each="cliente : ${listarClientes}">
+                        <td th:text="${cliente.nomeCompleto}"></td>
+                        <td th:text="${cliente.genero}"></td>
+                        <td><a th:href="'mailto:'+${cliente.email}" th:text="${cliente.email}"></a></td>
+                        <td th:text="${cliente.enderecoCompleto}"></td>
+                        <td th:text="${cliente.cep}"></td>
+                        <td th:text="${cliente.cidade}"></td>
+                        <td th:text="${#dates.format(cliente.dataNascimento,'dd/MM/yyyy')}"></td>
+                        <td><a th:href="@{/editarCliente/{id}(id=${cliente.id})}">Editar</a></td>
+                        <td><a th:href="@{/removerCliente/{id}(id=${cliente.id})}">Remover</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="lista2">
+        <div class="tabela2">
+            <br>
+            <h1 class="title3">LISTA DE DEPENDENTES CADASTRADOS</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>NOME COMPLETO</th>
+                        <th>DATA DE NASCIMENTO</th>
+                        <th>SEXO</th>
+                        <th>EDITAR</th>
+                        <th>REMOVER</th>
+                    </tr>
+            </thead>
+
+                <tbody>
+                    <tr th:each="dependente : ${listarDependentes}">
+                        <td th:text="${dependente.nomeDependente}"></td>
+                        <td th:text="${#dates.format(dependente.dataNascimentoDepen,'dd/MM/yyyy')}"></td>
+                        <td th:text="${dependente.generoDepen}"></td>
+                        <td><a th:href="@{/dependentes/editarDependente/{id}(id=${dependente.id})}">Editar</a></td>
+                        <td><a th:href="@{/dependentes/removerDependente/{id}(id=${dependente.id})}">Remover</a></td>
+                    </tr>
+                </tbody>
+        </div>
+
+        </table>
+    </div>
+    </div>
+</body>
+
+</html>

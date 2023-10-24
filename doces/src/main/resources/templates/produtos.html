@@ -1,0 +1,134 @@
+<!Doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <title>PRODUTOS</title>
+</head>
+
+<body class="pag2">
+    <header>
+        <nav class="nav">
+            <nav class="nav">
+                <a class="botton" href="/">HOME<i class="fi fi-br-home"></i></a>
+                <a class="botton" href="/produtos">PRODUTOS<i class="fi fi-rr-cupcake"></i></a>
+                <a class="botton" href="/public/contato.html">CONTATO<i class="fi fi-rr-call-incoming"></i></a>
+                <a class="botton" href="/pedidos">CARRINHO<i class="fi fi-sr-shopping-cart"></i></a>
+                <a class="botton" href="/cadastrar">CADASTRAR<i class="fi fi-rr-edit"></i></a>
+                <a class="botton" href="/listar">LISTAR<i class="fi fi-rr-document"></i></a>
+            </nav>
+
+    </header>
+    
+    <center>    
+        <form class="Busca" method="post" th:action="@{/produtos/pesquisar}">
+            <input type="search" name="campoTexto" id="CampoTexto" placeholder="Buscar item...">
+            <button type="submit" id="BotaoBusca"><i class="fi fi-br-search" id="lupa"></i></button>
+        </form>
+    </center>
+
+    <table>
+            <div>
+                <h1 class="title4">AQUI FORAM SEPARADOS NOSSOS PRODUTOS ESPECIALMENTE PARA VOCÊ !!</h1>
+            </div>
+        <tr>
+            <div>
+            <td><a href="/pedidos"><img class="imagens2" src="https://a-static.mlcdn.com.br/618x463/ovo-de-pascoa-nestle-surpresa-dinossauro-172g/drogariaaraujosa/123978/a9416a7628a3f27b49f48515e40b959a.jpg" alt="oOvo de Páscoa Surpresa" width="270" height="250"></a>
+                <p class="alinhamento">Ovo de Páscoa Surpresa <br>Dinossauro 172g</p>
+                <p class="alinhamento"><b>R$ 51,60</b></p>
+            </td>
+
+            <td><a href="/pedidos"><img class="imagens2" src="https://cdn.dooca.store/239/products/rt0zcyhftuehdwbnypjoiondkp4gbctd6w8j_640x640+fill_ffffff.jpg?v=1604039291" alt="Doce de Leite" width="270" height="250"></a>
+                <p class="alinhamento">Doce de Leite</p>
+                <p class="alinhamento"><b>R$ 50,59</b></p>
+            </td>
+            
+            <td><a href="/pedidos"><img class="imagens2" src="https://a-static.mlcdn.com.br/618x463/ovo-de-pascoa-ferrero-rocher-365g/drogariaaraujosa/862126/482428d4595d8dc39869b212e917a335.jpg" alt="Ovo de Páscoa Ferrero" width="270" height="250"></a>
+                <p class="alinhamento">Ovo de Páscoa Ferrero <br>Rocher - 225g</p>
+                <p class="alinhamento"><b>R$ 123,50</b></p>
+            </td>
+
+            <td><a href="/pedidos"><img class="imagens2" src="https://io.convertiez.com.br/m/doceefesta/shop/products/images/656/medium/bala-recheada-sortida-erlan-kg_250.jpg" alt="Bala Recheada Sortida" width="270" height="250" ></a>
+                <p class="alinhamento">Bala Recheada Sortida 400g</p>
+                <br>    
+                <p class="alinhamento"><b>R$6,59</b></p>
+            </td>
+
+            <td><a href="/pedidos"><img class="imagens2" src="https://io.convertiez.com.br/m/doceefesta/shop/products/images/652/medium/bala-mentinha-dura-erlan-kg_246.jpg" alt="Bala Mentinha Dura" width="270" height="250"></a>
+                <p class="alinhamento">Bala Mentinha Dura 400g</p>
+                <br>
+                <p class="alinhamento"><b>R$ 5,49</b>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <a  href="/pedidos"><img class="imagens2" src="/imagens/chocolate.jpg" alt="Chocolate" width="270" height="250"></a>
+                <p class="alinhamento">Chocolate Caseiro</p>
+                <p class="alinhamento"><b>R$ 10,59</b></p>
+             </td>
+
+            <td>
+                <a href="/pedidos"><img class="imagens2" src="https://www.rbsdirect.com.br/imagesrc/25439093.jpg?w=700" alt="Sorvete"  width="270" height="250"></a>
+                <p class="alinhamento">Sorvete</p>
+                <p class="alinhamento"><b>R$ 7,50</b></p>
+             </td>
+
+            <td><a  href="/pedidos"><img class="imagens2" src="/imagens/bolo.jpg" alt="Bolo"  width="270" height="250"></a>
+                <p class="alinhamento">Bolo de Chocolate</p>
+                <p class="alinhamento"><b>R$ 50,89</b></p>
+             </td>
+
+            <td>
+                <a href="/pedidos"><img class="imagens2" src="/imagens/pudim.jpg" alt="Pudin"  width="270" height="250"></a>
+                <p class="alinhamento">Pudim</p>
+                <p class="alinhamento"><b>R$ 10,00</b></p>
+             </td>
+
+            <td>
+                <a href="/pedidos"><img class="imagens2" src="/imagens/rosquinha.jpg" alt="rosquinha"  width="270" height="250"></a>
+                <p class="alinhamento">Rosquinha</p>
+                <p class="alinhamento"><b>R$ 20,59</b></p>
+             </td>
+        </tr>
+
+        <tr>
+            <td><a href="/pedidos"><img class="imagens2" src="https://m.media-amazon.com/images/I/719C4ShtxvL._AC_SX425_.jpg" alt="Bombom Lacta" width="270" height="250"></a>
+                <p class="alinhamento">Bombom Lacta Sonho De Valsa 1Kg</p>
+                <p class="alinhamento"><b>R$41,89</b></p>
+            </td>
+
+            <td><a href="/pedidos"><img class="imagens2" src="https://a-static.mlcdn.com.br/618x463/caixa-bombom-250g-garoto/magazinetambem/7766312aba7911eba3864201ac18500e/c376d18e5e7e0f82f8c7797b7be18171.jpg" alt="Garoto" width="270" height="250"></a>
+                <p class="alinhamento">Caixa de bombom da Garoto</p> 
+               <p class="alinhamento"> <b>R$ 9,99</b></p>
+            </td>
+
+            <td><a href="/pedidos"><img class="imagens2" src="https://a-static.mlcdn.com.br/618x463/chocolate-bombom-ferrero-rocher/fisherdocuras/9d426caa626d11eca77b4201ac18503a/9b21d54b4e2ca672206eb2b7e8ee6e1f.jpg" alt="Ferrero Rocher" width="270" height="250"></a>
+                <p class="alinhamento">Chocolate Bombom Ferrero Rocher</p>
+                <p class="alinhamento"><b>R$ 8,99</b></p>
+            </td>
+
+            <td><a href="/pedidos"><img  class="imagens2" src="https://www.anaterezachocolates.com.br/loja/wp-content/uploads/2013/05/20210606_212037.jpg" alt="Bomboms Coração" width="270" height="250"></a>
+                <p class="alinhamento">Bomboms Coração 144g</p>
+                <p class="alinhamento"><b>R$ 250,49</b></p>
+            </td>
+
+            <td><a href="/pedidos"><img class="imagens2" src="https://chocolatesbrandt.com.br/uploads/images/2020/03/53-caixa-bombom-12-bombons-1584969687.jpg" alt="Bomboms Gurme" width="270" height="250"></a>
+                <p class="alinhamento">Bomboms Gurme 120G</p>
+                <p class="alinhamento"><b>R$ 39,90</b><p>
+            </td>
+        </tr>
+    </div>
+
+    </table>  
+</body>
+
+</html>

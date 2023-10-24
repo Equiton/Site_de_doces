@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Editar | Pessoa</title>
+</head>
+<body class="pag2">
+
+    
+    <header>
+        <div class="but2">
+            <a class="botton3" href="/listar">VOLTAR</a>
+        </div>
+    </header>
+    
+    <section>
+
+        <form th:action="@{/listarEditarCliente/{id}(id=${cliente.id})}" th:object="${cliente}" method="post" class="Cds" th:if="${cliente != null}">
+            
+            <div class="formulario5">
+                    <br><h1 class="title2">EDITAR CLIENTE</h1>
+                <div>
+                    <label>Nome completo*:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Equiton Gomes da Silva" required th:field="*{nomeCompleto}" >
+                </div>
+
+                <div>
+                    <label>Data de nascimento*:</label>
+                    <input type="date" name="date" id="data" placeholder="01/02/03" th:field="*{dataNascimento}">
+                </div>
+
+                <div>
+                    <label>E-Mail*:</label>
+                    <input type="email" name="email" id="email" placeholder="goku_brabo@hotmail.com" required th:field="*{email}">
+                </div>
+
+                <div>
+                    <label>Sexo*:</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Masculino" value="Masculino" th:field="*{genero}"> Masculino
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Feminino" value= "Feminino" th:field="*{genero}"> Feminino
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Naoinformar" value="Não informar" th:field="*{genero}"> Não informar
+                        </label>
+                    </div>
+                </div>
+        
+                <div>
+                    <label>Endereço*:</label>
+                        <input type="text" placeholder="Francisco Ferreira Souto" id="endereco" th:field="*{enderecoCompleto}">
+                </div>
+
+                <div>
+                    <label>CEP*:</label>
+                        <input type="text" placeholder="59655000" id="cep" name="cep" th:field="*{cep}">
+                </div>
+
+                <div>
+                    <label>Cidade*:</label>
+                        <input type="text" placeholder="Mossoró" id="cidade" th:field="*{cidade}">
+                </div>
+
+                
+                <div align="center">
+                    <button class="botaoSubmit" type="reset">Limpar</button>
+                    <button class="botaoSubmit" type="submit" required>Cadastrar!</button>
+                </div>
+            </div>
+        </form>
+        
+
+        <form th:action="@{/dependentes/listarEditarDependente/{id}(id=${dependente.id})}" th:object="${dependente}" method="post"  class="Cds" th:if="${dependente != null}">
+           
+            <div class="formulario6">
+                <br><h1 class="title2">EDITAR DEPENDENTE</h1>
+                <div>
+                    <label >Nome completo*:</label>
+                    <input type="text" placeholder="Equiton" id="nomeDependente"  required th:field="*{nomeDependente}">
+                </div>
+
+                <div>
+                    <label>Data de nascimento*:</label>
+                    <input type="date" placeholder="01/02/03" id="dataDependente" required th:field="*{dataNascimentoDepen}">
+                </div>
+
+                <div>
+                    <label>Sexo*:</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Masculino" value="Masculino" th:field="*{generoDepen}"> Masculino
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Feminino" value= "Feminino" th:field="*{generoDepen}"> Feminino
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" id="Naoinformar" value="Não informar" th:field="*{generoDepen}"> Não informar
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <div align="center">
+                        <button class="botaoSubmit" type="reset">Limpar</button>
+                        <button class="botaoSubmit" type="submit" required>Cadastrar!</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+</body>
+</html>

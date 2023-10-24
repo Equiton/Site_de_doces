@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DocesApplication<doces>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.doces.doces.DocesApplication",
+            "projectName": "doces",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

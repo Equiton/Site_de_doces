@@ -1,0 +1,317 @@
+.pag1{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient( to right,  #228B22 25%, #ADFF2F, #66CD00, #228B22);
+}
+.pag2{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient( to right,  #228B22 25%,  #66CD00, #228B22);
+}
+
+.img_1{
+    text-align: center;
+}
+
+.title1{
+    margin: 0%;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    color: gold;
+    background-image: linear-gradient( to right,  black 25%, #8B3626, black);
+}
+.title2{
+    text-align: center;
+    font-family: cursive;
+}
+.title3{
+    text-align: center;
+    font-family: cursive;
+    color: white;
+}
+.title4{
+    text-align: center;
+    font-family: cursive;
+    color:#ADFF2F;
+    background-color: #8B4513;
+    border: 3px solid #000000;
+}
+#b{
+    color: white;
+}
+#contato{
+    border: 2px solid black;
+    padding: 5px;
+}
+.produtos{
+    user-select: none;
+    background-image: linear-gradient(-45deg,  #EEEE00 15%, #8B3626 15%, #8B4513 25%);
+}
+.nav{
+    margin-top: 0%;
+    margin: 1%;
+    padding: 6px 16px;
+    font-size: 20px;
+    text-align: center;
+}
+.botton{
+    border: 2px solid #000000;
+    box-shadow: 1px 1px 3px black;
+    margin-top: 1%;
+    padding: 30px;
+    box-sizing: border-box;
+    color: gold;
+    background-color:  #8B3626;
+    text-decoration: none;
+    padding: 6px 16px;
+    font-size: 30px;
+    border-radius: 10px;
+    user-select: none;
+}
+.botton2{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 1%;
+    padding: 30px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    user-select: none;
+    background-color:#CD3333;
+    border: 3px solid black;
+}
+.botton3{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 1%;
+    padding: 30px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    user-select: none;
+    background-color:#D1EEEE;
+    border: 3px solid black;
+}
+.botton:active{
+    position: relative;
+    box-shadow: none;
+    top: 5px;
+}
+
+.botton2:active{
+    position: relative;
+    box-shadow: none;
+    top: 5px;
+}
+.botton3:active{
+    position: relative;
+    box-shadow: none;
+    top: 5px;
+}
+
+.botton2:hover{
+    background-color: #6C7B8B;
+}
+.botton3:hover{
+    background-color: aqua;
+}
+.img{
+    border: 2px solid black;
+    margin: 2%;
+    width: 200px; 
+    height: 200px;
+    border-radius:50% ;
+    
+}
+.img:active{
+    position: relative;
+    box-shadow: none;
+    top: 10px;
+}
+.img:hover{
+    filter: grayscale(100%);
+    box-shadow: 5px 5px 20px black ;
+
+}
+.video1{
+    margin-top: 05%;
+    height: 300px;
+    width: 800px;
+}
+
+div{
+    margin: 3%;
+}
+.Cds{
+    float: left;
+    width: 500px;
+    
+}
+.formulario1{
+    background-color: #E0FFFF;
+    border: 1px solid black;
+    user-select: none;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px black;
+}
+.formulario2{
+    background-color:#8FBC8F;
+    border: 1px solid black;
+    user-select: none;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px black;
+}
+.formulario3{
+    background-color:black;
+    border: 1px solid white;
+    user-select: none;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px black;
+}
+.formulario4{
+    background-color:#8B2323;
+    border: 1px solid black;
+    user-select: none;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px black;
+}
+.formulario5{
+    background-color:#0000FF;
+    border: 1px solid black;
+    user-select: none;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px black;
+}
+.formulario6{
+    background-color:#7FFFD4;
+    border: 1px solid black;
+    user-select: none;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px black;
+}
+
+.lista{
+    float:left;
+    width: auto;
+}
+.lista2{
+    float:left;
+    width: auto;
+}
+.lista3{
+    background-color: #FAFAD2;
+    border: 1px solid black;
+}
+.lista4{
+
+    border: 5px solid black;
+}
+
+.tabela1{
+    background-color: #708090;
+    border: 1px solid black;
+    user-select: none;
+    box-shadow: 5px 5px 10px black;
+    
+}
+.tabela2{
+    background-color: #8B8386;
+    border: 1px solid black;
+    user-select: none;
+    box-shadow: 5px 5px 10px black;
+}
+
+.botaoSubmit{
+    border: 0;
+    margin: 4%;
+    width: 100px;
+    color: whitesmoke;
+	background-color: #000000;
+    padding: 10px;
+    
+}
+
+.botaoSubmit2{
+    border: 0;
+    margin: 4%;
+    width: 100px;
+    color: black;
+	background-color: whitesmoke;
+    padding: 10px;
+    
+}
+
+.botaoSubmit:active{
+    position: relative;
+    box-shadow: none;
+    top:5px;
+}
+
+.botaoSubmit2:active{
+    position: relative;
+    box-shadow: none;
+    top:5px;
+}
+.botaoSubmit:hover{
+    color: #6C7B8B;
+}
+
+.botaoSubmit2:hover{
+    color: #696969;
+}
+
+.but{
+    text-align: center;
+}
+.but2{
+    margin-top: 2%;
+    text-align: center;
+}
+
+th{
+    border: 1px solid black;
+    padding-right:50px;
+}
+.marg{
+    width: auto;
+    margin: 10px;
+}
+
+.imagens2{
+    border-radius: 20%;
+    margin: 5px;
+    box-shadow: 2px 2px 5px #228B22;
+    border: 3px solid #000000;
+}
+
+.imagens2:active{
+    position: relative;
+    box-shadow: none;
+    top: 5px;
+}
+.alinhamento{
+    text-align: center;
+}
+.box{
+    margin-top: 5%;
+    margin-left: 300px;
+    width: 800px;
+    background-color: #7FFFD4;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.Busca{
+    padding: 15px;  
+}
+
+#CampoTexto,  #BotaoBusca{
+    font-size: 15px;
+    border-radius: 15px;
+    border:2px solid  black;
+    padding: 15px;
+    box-shadow: 1px 1px 3px black;
+  }
+
+#BotaoBusca{
+    cursor: pointer;
+    background: green;
+    color: white;  
+} 

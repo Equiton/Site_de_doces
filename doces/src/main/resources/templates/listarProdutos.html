@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Produtos | Cadastro</title>
+</head>
+<body class="pag2">
+
+    <header>
+        <div class="but2">
+            <a class="botton3" href="/listar">VOLTAR</a>
+        </div>
+    </header>
+    
+    <Section class="lista3">
+
+        <table> 
+            <div class="marg">
+                <br><h1 class="title2">PRODUTOS CADASTRADOS</h1>
+            </div>
+            <tr>
+                <Strong><th>NOME</th>
+                <th>MARCA</th>
+                <th>ALTURA</th>
+                <th>LARGURA</th>
+                <th>PROFUNDIDADE</th>
+                <th>VOLUME</th>
+                <th>PESO</th>
+                <th>PREÇO DE COMPRA</th>
+                <th>PREÇO DE VENDA</th>
+                <th>DATA DE CADASTRO</th>
+                <th>EDITAR</th>
+                <th>REMOVER</th>
+                </Strong>
+
+            </tr>
+
+            <tbody>
+                <tr th:each="produto : ${produtos}">
+                    <td th:text="${produto.nomeDoProduto}"></td>
+                    <td th:text="${produto.marca}"></td>
+                    <td th:text="${produto.altura}"></td>
+                    <td th:text="${produto.largura}"></td>
+                    <td th:text="${produto.profundidade}"></td>
+                    <td th:text="${produto.volume}"></td>
+                    <td th:text="${produto.peso}"></td>
+                    <td th:text="${produto.precoDeCompra}"></td>
+                    <td th:text="${produto.precoDeVenda}"></td>
+                    <td th:text="${#dates.format(produto.dataDeCadastro,'dd/MM/yyyy')}"></td>
+                    <td><a th:href="@{/produtos/editarProduto/{id}(id=${produto.id})}">Editar</a></td>
+                    <td><a th:href="@{/produtos/removerProdutos/{id}(id=${produto.id})}">Remover</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+    </Section>
+
+
+</body>
+</html>
